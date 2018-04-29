@@ -1,4 +1,6 @@
-== Apples and Oranges
+= Apples and Oranges
+
+== Part I
 
 Sam's house has an apple tree and an orange tree that yield an abundance of fruit. In the diagram below, the red region denotes his house, where s is the start point, and t is the endpoint. The apple tree is to the left of his house, and the orange tree is to its right. You can assume the trees are located on a single point, where the apple tree is at point a, and the orange tree is at point b.
 
@@ -61,10 +63,18 @@ Print two space-separated integers on one line of output:
 
 === Explanation 0
 
-The first apple falls at position 5 - 2 = 3 . 
-The second apple falls at position 5 + 2 = 7. 
-The third apple falls at position 5 + 1 = 6. 
-The first orange falls at position 15 + 5 = 20. 
-The second orange falls at position 15 - 6 = 9. 
-Only the second apple falls within the region between 7 and 11, so we print 1 as our first line of output. 
-Only the second orange falls within the region between 7 and 11, so we print 1 as our second line of output.
+* The first apple falls at position 5 - 2 = 3 . 
+* The second apple falls at position 5 + 2 = 7. 
+* The third apple falls at position 5 + 1 = 6. 
+* The first orange falls at position 15 + 5 = 20. 
+* The second orange falls at position 15 - 6 = 9. 
+* Only the second apple falls within the region between 7 and 11, so we print 1 as our first line of output. 
+* Only the second orange falls within the region between 7 and 11, so we print 1 as our second line of output.
+
+== Part II
+
+Rewrite the program three times.
+
+* The first time, make program as readable as you can make it.
+* The second time, optimise the program to run fast fast as you can make it.
+* The third time, write as extendible a program as you can.

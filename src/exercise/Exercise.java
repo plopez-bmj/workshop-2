@@ -4,54 +4,48 @@ import java.util.*;
 
 public class Exercise
 {
-    /*
-     * Complete the countApplesAndOranges function below.
-     */
-    static void countApplesAndOranges(int s, int t, int a, int b, int[] apples, int[] oranges) {
-        /*
-         * Write your code here.
-         */
-    }
-
-    private static final Scanner scan = new Scanner(System.in);
-
     public static void main(String[] args) {
-        String[] st = scan.nextLine().split(" ");
-
-        int s = Integer.parseInt(st[0].trim());
-
-        int t = Integer.parseInt(st[1].trim());
-
-        String[] ab = scan.nextLine().split(" ");
-
-        int a = Integer.parseInt(ab[0].trim());
-
-        int b = Integer.parseInt(ab[1].trim());
-
-        String[] mn = scan.nextLine().split(" ");
-
-        int m = Integer.parseInt(mn[0].trim());
-
-        int n = Integer.parseInt(mn[1].trim());
-
+        Scanner in = new Scanner(System.in);
+        int s = in.nextInt();
+        int t = in.nextInt();
+        int a = in.nextInt();
+        int b = in.nextInt();
+        int m = in.nextInt();
+        int n = in.nextInt();
         int[] apple = new int[m];
-
-        String[] appleItems = scan.nextLine().split(" ");
-
-        for (int appleItr = 0; appleItr < m; appleItr++) {
-            int appleItem = Integer.parseInt(appleItems[appleItr].trim());
-            apple[appleItr] = appleItem;
+        
+        int apples = 0;
+        
+        for(int apple_i=0; apple_i < m; apple_i++){
+            apple[apple_i] = in.nextInt();
+            
+            int applePos = a + apple[apple_i];
+            
+            if (applePos >= s && applePos <= t)
+            {
+                apples++;
+            }
         }
-
+        
         int[] orange = new int[n];
-
-        String[] orangeItems = scan.nextLine().split(" ");
-
-        for (int orangeItr = 0; orangeItr < n; orangeItr++) {
-            int orangeItem = Integer.parseInt(orangeItems[orangeItr].trim());
-            orange[orangeItr] = orangeItem;
+        
+        int oranges = 0;
+        
+        for(int orange_i=0; orange_i < n; orange_i++){
+            orange[orange_i] = in.nextInt();
+            
+            int orangePos = b + orange[orange_i];
+            
+            if (orangePos >= s && orangePos <= t)
+            {
+                oranges++;
+            }
         }
-
-        countApplesAndOranges(s, t, a, b, apple, orange);
+        
+        in.close();
+        
+        System.out.println(apples);
+        System.out.println(oranges);        
+        
     }
 }
